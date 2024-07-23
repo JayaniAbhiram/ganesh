@@ -1,0 +1,268 @@
+body{
+    background-color: #045036;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        nav {
+            position: fixed;
+            width: 100%;
+            background: #2980b9;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: auto;
+            padding: 0 20px;
+            height: 75px;
+        }
+        .logo a {
+            color: #fff;
+            font-size: 27px;
+            font-weight: 600;
+            text-decoration: none;
+        }
+        .menu {
+            display: flex;
+            list-style: none;
+        }
+        .menu li {
+            margin: 0 15px;
+        }
+        .menu li a {
+            color: #fff;
+            font-size: 17px;
+            font-weight: 500;
+            text-decoration: none;
+        }
+        .menu-icon {
+            display: none;
+            color: #fff;
+            font-size: 30px;
+            cursor: pointer;
+        }
+        @media (max-width: 768px) {
+            .menu {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                position: absolute;
+                top: 75px;
+                left: 0;
+                background: #2980b9;
+                text-align: center;
+            }
+            .menu.active {
+                display: flex;
+            }
+            .menu li {
+                margin: 15px 0;
+            }
+            .menu-icon {
+                display: block;
+            }
+        }
+
+
+/* main imag */
+.imgcontainer {
+    padding-top: 50px;
+    text-align: center;
+}
+
+img {
+    height: 600px; /* Maintain aspect ratio */
+    max-width: 100%; /* Make image responsive */
+}
+
+/* Media query for mobile devices */
+@media only screen and (max-width: 600px) {
+    .imgcontainer {
+        padding-top: 50px;
+    }
+
+    img {
+        max-height: 300px; /* Adjust the height for smaller screens */
+    }
+}
+
+/* main imag */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* memories section */
+
+  
+  
+  
+  
+  
+  
+ 
+/* memories section */
+
+/* slider box */
+.sliderbox{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    /* background: rgb(29, 29, 29); */
+  }
+  
+  .slider_container {
+    position: relative;
+    width: 60%;
+    min-width: 50rem;
+    height: 30rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    overflow: hidden;
+    border: 2px solid #ccc; /* Light grey border */
+  border-radius: 15px;
+  }
+  
+  .slider {
+    position: relative;
+    width: 400%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    animation: 30s cubic-bezier(1, 0.95, 0.565, 1) sliding infinite;
+  }
+  
+  .slide {
+    position: relative;
+    min-width: 100%;
+    height: 100%;
+  }
+  
+  .slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the container */
+  }
+  
+  .slide .caption {
+    position: absolute;
+    left: 0;
+    bottom: 5%;
+    font-size: 2rem;
+    font-weight: 600;
+    color: white;
+    text-transform: capitalize;
+    background: rgba(0, 0, 0, 0.348);
+    backdrop-filter: blur(10px);
+    padding: 1rem 2rem;
+    border-radius: 0 2rem 2rem 0;
+  }
+  
+  @media (min-width: 768px) {
+    .slider_container {
+      width: 60%;
+      min-width: 50rem;
+      height: 30rem;
+    }
+    
+    .slide .caption {
+      font-size: 5rem;
+      padding: 1rem 5rem;
+    }
+  }
+  
+  @media (max-width: 767px) {
+    .slider_container {
+      width: 90%;
+      min-width: auto;
+      height: 20rem;
+    }
+    
+    .slide .caption {
+      font-size: 1.5rem;
+      padding: 0.5rem 2rem;
+    }
+  }
+  
+  @keyframes sliding {
+    0% {
+      transform: translateX(0%);
+    }
+    20% {
+      transform: translateX(0%);
+    }
+    25% {
+      transform: translateX(-100%);
+    }
+    45% {
+      transform: translateX(-100%);
+    }
+    50% {
+      transform: translateX(-200%);
+    }
+    70% {
+      transform: translateX(-200%);
+    }
+    75% {
+      transform: translateX(-300%);
+    }
+    95% {
+      transform: translateX(-300%);
+    }
+    100% {
+      transform: translateX(-400%);
+    }
+  }
+  
+  .slide.one {
+    background: rgb(182, 19, 109);
+  }
+  .slide.two {
+    background: rgb(255, 64, 64);
+  }
+  .slide.three {
+    background: rgb(11, 173, 188);
+  }
+  .slide.four {
+    background: rgb(11, 188, 14);
+  }
+  .slide.five {
+    background: rgb(173, 11, 188);
+  }
+  
+/* slider box */

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donation Form</title>
+    <style>
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="number"],
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        select {
+            appearance: none;
+            background: url("https://cdn3.iconfinder.com/data/icons/fatcow/32x32/payment_mastercard.png")
+                no-repeat 96% center;
+            background-size: 20px 20px;
+        }
+
+        button[type="submit"] {
+            background-color: #4caf50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        .instructions {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        #image-container {
+            display: none;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        #image-container img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        #info-text {
+            font-size: 16px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <form id="donation-form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+      
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+      
+        <label for="mobile">Mobile Number:</label>
+        <input type="text" id="mobile" name="mobile" required>
+
+        <label for="amount">Donation Amount:</label>
+        <input type="number" id="amount" name="amount" required>
+      
+        <label for="payment-method">Payment Method:</label>
+        <select id="payment-method" name="payment-method" required>
+          <option value="">Select Payment Method</option>
+          <option value="upi">UPI ID</option>
+          <option value="mobile">Mobile Number</option>
+          <option value="qr-code">Qr Code</option>
+        </select>
+      
+        <button type="submit" id="donate-button">Donate</button>
+    </form>
+
+    <div id="image-container">
+        <img id="payment-image" src="" alt="Payment Information">
+        <div id="info-text"></div>
+        <button id="whatsapp-button" style="background-color: #25D366; color: white;border: none;border-radius: 5px;
+padding: 10px 20px;font-size: 16px;font-family: Arial, sans-serif;cursor: pointer;transition: background-color 0.3s ease, transform 0.3s ease;">Send via WhatsApp</button>
+        <p>Make sure you click on the submit button once the payment is successful.</p>
+    </div>
+
+    <script>
+        const form = document.querySelector("#donation-form");
+        const donateButton = document.querySelector("#donate-button");
+        const imageContainer = document.querySelector("#image-container");
+        const whatsappButton = document.querySelector("#whatsapp-button");
+        const paymentImage = document.querySelector("#payment-image");
+        const infoText = document.querySelector("#info-text");
+
+        form.addEventListener("submit", (event) => {
+            event.preventDefault();
+
+            const name = form.elements["name"].value;
+            const email = form.elements["email"].value;
+            const mobile = form.elements["mobile"].value;
+            const amount = form.elements["amount"].value;
+            const paymentMethod = form.elements["payment-method"].value;
+
+            let message;
+            switch(paymentMethod) {
+                case 'upi':
+                    paymentImage.src = ''; // Hide image for UPI
+                    infoText.innerHTML = 'Kindly pay to the given UPI ID: abc@ybl';
+                    message = `Name: ${name}%0AEmail: ${email}%0AMobile: ${mobile}%0AAmount: ${amount}%0APayment Method: UPI ID (abc@ybl)`;
+                    break;
+                case 'mobile':
+                    paymentImage.src = ''; // Hide image for Mobile Number
+                    infoText.innerHTML = 'Kindly please pay to the given mobile number: 8520997742';
+                    message = `Name: ${name}%0AEmail: ${email}%0AMobile: ${mobile}%0AAmount: ${amount}%0APayment Method: Mobile Number (8520997742)`;
+                    break;
+                case 'qr-code':
+                    paymentImage.src = 'https://img.freepik.com/premium-vector/xabarcode_195186-2225.jpg?size=626&ext=jpg&ga=GA1.2.579241400.1689570415&semt=ais_user';
+                    infoText.innerHTML = ''; // Clear text for QR Code
+                    message = `Name: ${name}%0AEmail: ${email}%0AMobile: ${mobile}%0AAmount: ${amount}%0APayment Method: QR Code`;
+                    break;
+                default:
+                    paymentImage.src = '';
+                    infoText.innerHTML = '';
+                    message = '';
+            }
+
+            imageContainer.style.display = 'block';
+
+            whatsappButton.addEventListener("click", () => {
+                if (message) {
+                    const phoneNumber = "918520997742";  // Replace with the target phone number in international format
+                    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
+                    window.open(whatsappUrl, "_blank");
+                }
+                form.reset();
+                imageContainer.style.display = 'none';
+                location.reload(); // Refresh the page
+            });
+        });
+    </script>
+</body>
+</html>
