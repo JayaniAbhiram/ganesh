@@ -9,6 +9,18 @@
   <link href="https://fonts.googleapis.com/css?family=Parisienne&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <style>
+      @keyframes fadeIn {
+          from { opacity: 0; }
+          to { opacity: 1; }
+      }
+
+      @keyframes slideIn {
+          from { transform: translateX(-100%); }
+          to { transform: translateX(0); }
+      }
+  </style>
+    
     
 </head>
 <body>
@@ -17,11 +29,11 @@
             <div class="logo"><a href="#">Gold Phase Youth Assosiaton</a></div>
             <ul class="menu">
                 <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
+                <!-- <li><a href="#about">About</a></li> -->
                 <li><a href="gallery.html">gallery</a></li>
 
-                <li><a href="#events">Events</a></li>
-                <li><a href="iternary.html">Iternary</a></li>
+                <!-- <li><a href="#events">Events</a></li> -->
+                <!-- <li><a href="iternary.html">Iternary</a></li> -->
                 <li><a href="payment.html">Donate Us</a></li>
                 
             </ul>
@@ -30,53 +42,86 @@
     </nav>
     
 
-    <section id="home">Home Section</section>
+    <!-- <section id="home">Home Section</section> -->
     <div class="imgcontainer">
         <img src="img\logo.png" alt="A black, brown, and white dog wearing a kerchief">
+        <p style="font-size: 25px;"><strong>ఓం గం గణపతయే నమః</strong></p>
         </div>
 
+        
+
     
-    <section id="about">About Section</section>
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-    <section id="events">Events Section</section>
+    <!-- <section id="about">About Section</section> -->
+
+    <div style=" font-family: 'Great Vibes', cursive; color: #3c3c3b; text-align: center; padding: 50px;">
+      <div style="animation: fadeIn 3s;">
+        <p style="font-size: 3em; margin: 0; animation: slideIn 2s;"><strong>గణేష్ చతుర్థి శుభాకాంక్షలు</strong></p>
+        <p style="font-size: 1em; margin: 20px 0; animation: fadeIn 4s;">గణేష్ చతుర్థి యొక్క ఈ పవిత్రమైన సందర్భంగా, గణేశుడు మీకు ఆనందం, జ్ఞానం మరియు శ్రేయస్సును అనుగ్రహిస్తాడు. ప్రియమైన ఏనుగు తల గల దేవత జన్మదినాన్ని మనం జరుపుకుంటున్నప్పుడు, అతను సూచించే సద్గుణాలను ఆలింగనం చేద్దాం: జ్ఞానం, జ్ఞానం మరియు దయగల హృదయం.</p>
+        
+        
+    </div>
+    </div>
 
     <div class="sliderbox">
         <section class="slider_container">
             <section class="slider">
               <div class="slide one">
-                <img src="https://cdn.pixabay.com/photo/2022/10/20/11/26/landscape-7534634__340.jpg" alt="">
+                <img src="img\ganesh\1.jpg" alt="">
         
-                <span class="caption">
+                <!-- <span class="caption">
                   slide one
-                </span>
+                </span> -->
               </div>
               <div class="slide two">
-                <img src="https://cdn.pixabay.com/photo/2022/09/27/05/10/cape-leadwort-7482043__340.jpg" alt="">
-                <span class="caption">
+                <img src="img\nimarjanam\2.jpg" alt="">
+                <!-- <span class="caption">
                   slide two
-                </span>
+                </span> -->
               </div>
               <div class="slide three">
-                <img src="https://cdn.pixabay.com/photo/2018/01/14/23/12/nature-3082832__340.jpg" alt="">
-                <span class="caption">
+                <img src="img\ganesh\3.jpg" alt="">
+                <!-- <span class="caption">
                   slide three
-                </span>
+                </span> -->
               </div>
               <div class="slide four">
-                <img src="https://cdn.pixabay.com/photo/2023/01/06/13/33/city-7701251_960_720.jpg" alt="">
-                <span class="caption">
+                <img src="img\nimarjanam\1.jpg" alt="">
+                <!-- <span class="caption">
                   slide four
-                </span>
+                </span> -->
+              </div>
+              <div class="slide three">
+                <img src="img\ganesh\4.jpg" alt="">
+                <!-- <span class="caption">
+                  slide three
+                </span> -->
+              </div>
+              <div class="slide three">
+                <img src="img\ganesh\5.jpg" alt="">
+                <!-- <span class="caption">
+                  slide three
+                </span> -->
+              </div>
+              <div class="slide three">
+                <img src="img\ganesh\6.jpg" alt="">
+                <!-- <span class="caption">
+                  slide three
+                </span> -->
               </div>
               <div class="slide four">
                 <img src="https://cdn.pixabay.com/photo/2023/01/10/00/30/swan-7708580__340.jpg" alt="">
-                <span class="caption">
+                <!-- <span class="caption">
                   slide five
-                </span>
+                </span> -->
               </div>
             </section>
           </section>
     </div>
+
+
+    <a style="color: #ac2bac;" href="#!" role="button"
+  ><i class="fab fa-instagram fa-lg"></i
+></a>
 
 
     
@@ -93,7 +138,7 @@
 
 
 
-    <section id="contact">Contact Section</section>
+    <!-- <section id="contact">Contact Section</section> -->
 
     <script>
         document.querySelector('.menu-icon').addEventListener('click', () => {

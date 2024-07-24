@@ -8,9 +8,14 @@
   <link href="https://fonts.googleapis.com/css?family=Parisienne&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap" rel="stylesheet">
   <style>
+    body{
+        /* background: linear-gradient(135deg, #FFA526, #eaf11a, #FFD700); */
+        background-color: #CDE8E5;
+    }
     
 #container {
   margin: auto;
+  
 
 }
 
@@ -18,11 +23,12 @@
 	text-align: center;
     background: -webkit-linear-gradient(#e3ca66, #b48e47);
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    /* -webkit-text-fill-color: transparent; */
     font-size: 4.5em;
-    font-family: 'Parisienne', cursive;
+    font-family: 'Times New Roman', Times, serif;
 	margin-bottom: 15px;
     padding-top: 100px;
+    color: black;
 }
 .header p {
 	text-align: center;
@@ -68,18 +74,19 @@ display: inline-block;
     box-shadow: -1px 1px 11px rgba(0,0,0,.4);
     margin: 0 40px;
     border-radius: 30px;
-	background-color: #232323;
+	background-color: #7Ab2b2;
+    /* background: linear-gradient(135deg, #FFA526, #eaf11a, #FFD700); */
 }
 
 .filters li {
 	display: inline-block;
     padding: 10px 25px;
-    font-size: 15px;
+    font-size: 25px;
     font-weight: 600;
     cursor: pointer;
 }
 .filters li a{
-	color: #b6b6b6;
+	color: black;
 	text-decoration: none;
 }
 .filters li a:hover{
@@ -194,8 +201,9 @@ display: inline-block;
         nav {
             position: fixed;
             width: 100%;
-            background: #2980b9;
-            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+            background-color: #7Ab2b2;
+            /* background: linear-gradient(135deg, #FFA526, #eaf11a, #FFD700); */
+            /* box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); */
             z-index: 1000;
         }
         .navbar {
@@ -222,7 +230,7 @@ display: inline-block;
         }
         .menu li a {
             color: #fff;
-            font-size: 17px;
+            font-size: 45px;
             font-weight: 500;
             text-decoration: none;
         }
@@ -292,41 +300,103 @@ display: inline-block;
 <div class="filters filter-button-group">
 	<ul>
 		<li class="active"><a href="javascript:void(0);" data-filter="*">All</a></li>
-		<li><a href="javascript:void(0);" data-filter="bike">Pooja</a></li>
-		<li><a href="javascript:void(0);" data-filter="bus">Annadhanam</a></li>
-        <li><a href="javascript:void(0);" data-filter="car">Nimarjanam</a></li>
+		<li><a href="javascript:void(0);" data-filter="pooja">Pooja</a></li>
+		<li><a href="javascript:void(0);" data-filter="annadhanam">Annadhanam</a></li>
+        <li><a href="javascript:void(0);" data-filter="nimarjanam">Nimarjanam</a></li>
 	</ul>
 </div>
 	<div id="container" class="isotope">
-        <div class="grid-item" data-filter="bike">
-        <a class="popupimg" href="https://images.pexels.com/photos/25548962/pexels-photo-25548962/free-photo-of-a-dirt-road-with-a-fence-and-a-gate.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load">
-        <img src="https://images.pexels.com/photos/25548962/pexels-photo-25548962/free-photo-of-a-dirt-road-with-a-fence-and-a-gate.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load">
+        <div class="grid-item" data-filter="pooja">
+        <a class="popupimg" href="img\pooja\1.jpg">
+        <img src="img\pooja\1.jpg">
         </a>
-        <!-- <div class="overlay">Bike</div> -->
+        </div>
+
+        <div class="grid-item" data-filter="pooja">
+        <a class="popupimg" href="img\pooja\2.jpg">
+        <img src="img\pooja\2.jpg">
+        </a>
+        </div>
+
+
+        <div class="grid-item" data-filter="nimarjanam">
+            <a class="popupimg" href="img\nimarjanam\1.mp4">
+                <video width="320" height="240" controls>
+                    <source src="img\nimarjanam\1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </a>
+        </div>
+
+        <div class="grid-item" data-filter="nimarjanam">
+            <a class="popupimg" href="img\nimarjanam\2.mp4">
+                <video width="320" height="240" controls>
+                    <source src="img\nimarjanam\2.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </a>
+        </div>
+
+        <div class="grid-item" data-filter="nimarjanam">
+            <a class="popupimg" href="img\nimarjanam\3.mp4">
+                <video width="320" height="240" controls>
+                    <source src="img\nimarjanam\3.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </a>
+        </div>
+
+        <div class="grid-item" data-filter="nimarjanam">
+            <a class="popupimg" href="img\nimarjanam\4.mp4">
+                <video width="320" height="240" controls>
+                    <source src="img\nimarjanam\4.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </a>
         </div>
         
-        <div class="grid-item" data-filter="car">
-        <a class="popupimg" href="https://images.pexels.com/photos/25548962/pexels-photo-25548962/free-photo-of-a-dirt-road-with-a-fence-and-a-gate.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load">
-        <img src="https://images.pexels.com/photos/25548962/pexels-photo-25548962/free-photo-of-a-dirt-road-with-a-fence-and-a-gate.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load">
+        
+        <div class="grid-item" data-filter="nimarjanam">
+        <a class="popupimg" href="img\nimarjanam\1.jpg">
+        <img src="img\nimarjanam\1.jpg">
         </a>
-        <!-- <div class="overlay">Car</div> -->
         </div>
-        
-        
-        <div class="grid-item" data-filter="bus">
-        <a class="popupimg" href="https://images.pexels.com/photos/25548962/pexels-photo-25548962/free-photo-of-a-dirt-road-with-a-fence-and-a-gate.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load">
-        <img src="https://images.pexels.com/photos/25548962/pexels-photo-25548962/free-photo-of-a-dirt-road-with-a-fence-and-a-gate.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load">
+
+        <div class="grid-item" data-filter="nimarjanam">
+        <a class="popupimg" href="img\nimarjanam\2.jpg">
+        <img src="img\nimarjanam\2.jpg">
         </a>
-        <!-- <div class="overlay">Bus</div> -->
+        </div>
+
+        <div class="grid-item" data-filter="nimarjanam">
+        <a class="popupimg" href="img\nimarjanam\3.jpg">
+        <img src="img\nimarjanam\3.jpg">
+        </a> 
+        </div>
+
+        <div class="grid-item" data-filter="nimarjanam">
+        <a class="popupimg" href="img\nimarjanam\4.jpg">
+        <img src="img\nimarjanam\4.jpg">
+        </a>
         </div>
 
         
-		<div class="grid-item" data-filter="bus">
+
+
+        
+        
+        <!-- <div class="grid-item" data-filter="annadhanam">
         <a class="popupimg" href="https://images.pexels.com/photos/25548962/pexels-photo-25548962/free-photo-of-a-dirt-road-with-a-fence-and-a-gate.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load">
         <img src="https://images.pexels.com/photos/25548962/pexels-photo-25548962/free-photo-of-a-dirt-road-with-a-fence-and-a-gate.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load">
         </a>
-        <!-- <div class="overlay">Bus</div> -->
-        </div>
+        </div> -->
+
+        
+		<!-- <div class="grid-item" data-filter="annadhanam">
+        <a class="popupimg" href="https://images.pexels.com/photos/25548962/pexels-photo-25548962/free-photo-of-a-dirt-road-with-a-fence-and-a-gate.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load">
+        <img src="https://images.pexels.com/photos/25548962/pexels-photo-25548962/free-photo-of-a-dirt-road-with-a-fence-and-a-gate.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load">
+        </a>
+        </div> -->
 	</div>
 
     <div class="isotope-pager" style="padding-top: 15px; text-align:center;"></div>

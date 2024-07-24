@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Donation Form</title>
     <style>
+        body{
+            /* background: linear-gradient(135deg, #FFA526, #eaf11a, #FFD700); */
+            background-color: #CDE8E5;
+        }
         form {
             max-width: 600px;
             margin: 0 auto;
@@ -94,7 +98,7 @@
         <select id="payment-method" name="payment-method" required>
           <option value="">Select Payment Method</option>
           <option value="upi">UPI ID</option>
-          <option value="mobile">Mobile Number</option>
+          <!-- <option value="mobile">Mobile Number</option> -->
           <option value="qr-code">Qr Code</option>
         </select>
       
@@ -107,6 +111,7 @@
         <button id="whatsapp-button" style="background-color: #25D366; color: white;border: none;border-radius: 5px;
 padding: 10px 20px;font-size: 16px;font-family: Arial, sans-serif;cursor: pointer;transition: background-color 0.3s ease, transform 0.3s ease;">Send via WhatsApp</button>
         <p>Make sure you click on the submit button once the payment is successful.</p>
+        <p>చెల్లింపు విజయవంతం అయిన తర్వాత మీరు whatsapp ద్వారా పంపు బటన్‌పై క్లిక్ చేశారని నిర్ధారించుకోండి.</p>
     </div>
 
     <script>
@@ -139,7 +144,7 @@ padding: 10px 20px;font-size: 16px;font-family: Arial, sans-serif;cursor: pointe
                     message = `Name: ${name}%0AEmail: ${email}%0AMobile: ${mobile}%0AAmount: ${amount}%0APayment Method: Mobile Number (8520997742)`;
                     break;
                 case 'qr-code':
-                    paymentImage.src = 'https://img.freepik.com/premium-vector/xabarcode_195186-2225.jpg?size=626&ext=jpg&ga=GA1.2.579241400.1689570415&semt=ais_user';
+                    paymentImage.src = 'img/payment.jpg';
                     infoText.innerHTML = ''; // Clear text for QR Code
                     message = `Name: ${name}%0AEmail: ${email}%0AMobile: ${mobile}%0AAmount: ${amount}%0APayment Method: QR Code`;
                     break;
@@ -153,7 +158,7 @@ padding: 10px 20px;font-size: 16px;font-family: Arial, sans-serif;cursor: pointe
 
             whatsappButton.addEventListener("click", () => {
                 if (message) {
-                    const phoneNumber = "918520997742";  // Replace with the target phone number in international format
+                    const phoneNumber = "+917093799951";  // Replace with the target phone number in international format
                     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
                     window.open(whatsappUrl, "_blank");
                 }
